@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strontia Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="stylev1.css" />
+  </head>
+  <body>
+    <div id="page-container">
+      <h1>Strontia Reservoir operations</h1>
+      <div id="buttonContainter">
+        <button
+          onclick="window.open('https://dwr.state.co.us/Tools/Stations/strresco?params=ELEV','_blank')"
+        >
+          Go to DWR gauge page
+        </button>
+        <button
+          onclick="window.open('https://coloradocodeflow.com/Projects/StreamflowData/index.html','_blank')"
+        >
+          Go to streamflow map!
+        </button>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+      <canvas id="StrontiaChart" style="width: 100%"></canvas>
+      <script src="scriptv1.js"></script>
+      <table id="StrontiaTable">
+        <tr>
+          <th></th>
+          <th>Elevation Change</th>
+          <th>Feet Per Hour</th>
+          <th>Feet Per Day</th>
+          <th>Projected 24-hour elevation</th>
+        </tr>
+      </table>
+      <footer id="footer"></footer>
+    </div>
+  </body>
+</html>
